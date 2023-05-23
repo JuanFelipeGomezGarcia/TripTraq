@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@drawable/Triptrack"
+    android:background="@drawable/triptrack"
     android:foregroundTint="#7C7C7C"
     tools:context=".MainActivity">
 
@@ -27,7 +27,6 @@
         app:cardBackgroundColor="#9C9C9C"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp"
-        app:cardStrokeColor="#000000"
         app:cardUseCompatPadding="false"
         app:contentPadding="1dp"
         app:flow_horizontalAlign="center"
@@ -70,7 +69,6 @@
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp"
         app:cardPreventCornerOverlap="false"
-        app:cardStrokeColor="#000000"
         app:cardUseCompatPadding="false"
         app:contentPadding="1dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,6 +111,7 @@
         android:layout_width="110dp"
         android:layout_height="35dp"
         android:layout_marginTop="35dp"
+        android:onClick="login"
         app:cardBackgroundColor="#6EE6D9"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"

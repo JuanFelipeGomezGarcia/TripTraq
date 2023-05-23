@@ -9,6 +9,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
+import com.android.volley.ParseError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.ServerError;
+import com.android.volley.TimeoutError;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     private EditText pt_usuario;
@@ -25,9 +41,49 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void onClickIniciar(View view){
-        Intent intent = new Intent(this,Home.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+    public void login(View v) {
+        final String usuario = pt_usuario.getText().toString().trim();
+        final String contrasena = pt_contraseña.getText().toString().trim();
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, "http://triptrack.eastus.cloudapp.azure.com/getlogin.php" + "?usuario=" + usuario + "&contrasena=" + contrasena,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        if (response.equals("Login exitoso")) {
+                            // Login exitoso, pasar a otra actividad
+                            Toast.makeText(MainActivity.this, "Login exitoso", Toast.LENGTH_SHORT).show();
+                            // Aquí puedes iniciar la otra actividad
+                        } else {
+                            // Usuario o contraseña incorrectos
+                            Toast.makeText(MainActivity.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        String errorMessage = "Error de conexión";
+
+                        if (error instanceof NetworkError) {
+                            errorMessage = "Error de red";
+                        } else if (error instanceof ServerError) {
+                            errorMessage = "Error del servidor";
+                        } else if (error instanceof AuthFailureError) {
+                            errorMessage = "Error de autenticación";
+                        } else if (error instanceof ParseError) {
+                            errorMessage = "Error de análisis";
+                        } else if (error instanceof NoConnectionError) {
+                            errorMessage = "Sin conexión";
+                        } else if (error instanceof TimeoutError) {
+                            errorMessage = "Tiempo de espera agotado";
+                        }
+
+                        // Mostrar el mensaje de error en el Toast
+                        Toast.makeText(getApplicationContext(), errorMessage, Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        // Agregar la solicitud a la cola de solicitudes
+        Volley.newRequestQueue(this).add(stringRequest);
     }
 }
