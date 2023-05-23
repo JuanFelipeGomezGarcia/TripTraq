@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void login(View v) {
-        final String usuario = pt_usuario.getText().toString().trim();
-        final String contrasena = pt_contraseña.getText().toString().trim();
+        String usuario = pt_usuario.getText().toString().trim();
+        String contrasena = pt_contraseña.getText().toString().trim();
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, "http://triptrack.eastus.cloudapp.azure.com/getlogin.php" + "?usuario=" + usuario + "&contrasena=" + contrasena,
                 new Response.Listener<String>() {
