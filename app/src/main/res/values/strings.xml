@@ -37,4 +37,6 @@
     <string name="precio_galon3">Precio Galon</string>
     <string name="cancelar3">Cancelar</string>
     <string name="guardar4">Guardar</string>
+    <string name="origen1">Origen</string>
+    <string name="destino1">Destino</string>
 </resources>

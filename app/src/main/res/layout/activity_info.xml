@@ -31,8 +31,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-        <Spinner
-            android:id="@+id/sp_origen"
+        <EditText
+            android:id="@+id/et_origen"
+            android:hint="@string/origen1"
             android:layout_width="match_parent"
             android:layout_height="40dp" />
     </androidx.cardview.widget.CardView>
@@ -61,8 +62,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-        <Spinner
-            android:id="@+id/sp_destino"
+        <EditText
+            android:id="@+id/et_destino"
+            android:hint="@string/destino1"
             android:layout_width="match_parent"
             android:layout_height="40dp" />
     </androidx.cardview.widget.CardView>
@@ -244,7 +246,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/boton"
-        android:onClick="onClickGuardar"
+        android:onClick="onClick"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cv_cancelar"
