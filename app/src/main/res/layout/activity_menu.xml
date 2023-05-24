@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
-        android:text="Ruta"
+        android:text="@string/ruta"
         android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -60,6 +60,7 @@
                 android:layout_marginEnd="20dp"
                 android:backgroundTint="#52D673"
                 android:foregroundGravity="center"
+                android:onClick="onClickInicio"
                 app:cardCornerRadius="20dp"
                 app:layout_gravity="center">
 
@@ -98,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Menú"
+        android:text="@string/men"
         android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -138,6 +139,7 @@
                     android:layout_marginRight="20dp"
                     android:backgroundTint="#62C0CC"
                     android:foregroundGravity="center"
+                    android:onClick="onClickBuscar"
                     app:cardCornerRadius="20dp">
 
                     <ImageView
@@ -156,7 +158,9 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:backgroundTint="#CDC25D"
-                    app:cardCornerRadius="20dp">
+                    android:onClick="onClickMapa"
+                    app:cardCornerRadius="20dp"
+                    tools:ignore="SpeakableTextPresentCheck">
 
                     <ImageView
                         android:id="@+id/imageView6"
@@ -191,7 +195,9 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="20dp"
                     android:backgroundTint="#A35D4C"
-                    app:cardCornerRadius="20dp">
+                    android:onClick="onClickGas"
+                    app:cardCornerRadius="20dp"
+                    tools:ignore="SpeakableTextPresentCheck">
 
                     <ImageView
                         android:id="@+id/imageView5"
@@ -209,6 +215,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:backgroundTint="#705B5B"
+                    android:onClick="onClickReparacion"
                     app:cardCornerRadius="20dp">
 
                     <ImageView

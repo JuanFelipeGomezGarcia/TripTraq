@@ -53,7 +53,8 @@
                 android:foregroundTintMode="add"
                 android:hint="@string/pt_usuario"
                 android:inputType="textPersonName"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:autofillHints="" />
         </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
@@ -91,7 +92,8 @@
                 android:ems="10"
                 android:gravity="center"
                 android:hint="@string/pt_contraseña"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:autofillHints="" />
         </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
@@ -124,7 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold" />
