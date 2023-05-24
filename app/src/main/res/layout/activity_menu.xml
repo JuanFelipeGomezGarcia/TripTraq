@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:background="@color/fondo"
     tools:context=".Menu">
 
@@ -44,9 +45,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_ruta">
 
         <androidx.gridlayout.widget.GridLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:addStatesFromChildren="false"
             android:foregroundGravity="center">
 
@@ -54,18 +57,18 @@
                 android:id="@+id/cv_inicio"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
+                android:layout_marginEnd="20dp"
                 android:backgroundTint="#52D673"
                 android:foregroundGravity="center"
                 app:cardCornerRadius="20dp"
                 app:layout_gravity="center">
 
                 <ImageView
-                    android:id="@+id/img_inicio"
+                    android:id="@+id/imageView3"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    tools:srcCompat="@drawable/play" />
+                    app:srcCompat="@drawable/play" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -79,11 +82,11 @@
                 app:layout_gravity="center">
 
                 <ImageView
-                    android:id="@+id/img_fin"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:id="@+id/imageView4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
-                    tools:srcCompat="@drawable/stop" />
+                    app:srcCompat="@drawable/stop" />
             </androidx.cardview.widget.CardView>
 
         </androidx.gridlayout.widget.GridLayout>
@@ -122,42 +125,49 @@
             android:layout_height="133dp"
             app:cardBackgroundColor="@color/card">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_lupa"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="#62C0CC"
-                app:cardCornerRadius="20dp">
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-                <ImageView
-                    android:id="@+id/img_lupa"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    tools:srcCompat="@drawable/lupa" />
-            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_lupa"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#62C0CC"
+                    android:foregroundGravity="center"
+                    app:cardCornerRadius="20dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_mapa"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="70dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="#CDC25D"
-                app:cardCornerRadius="20dp">
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/lupa" />
+                </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:id="@+id/img_mapa"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    tools:srcCompat="@drawable/mapa" />
-            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_mapa"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#CDC25D"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/mapa" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.gridlayout.widget.GridLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -168,42 +178,49 @@
             app:cardBackgroundColor="@color/card"
             app:cardCornerRadius="20dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_gas"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="#A35D4C"
-                app:cardCornerRadius="20dp">
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-                <ImageView
-                    android:id="@+id/img_gas"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    tools:srcCompat="@drawable/gas" />
-            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_gas"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#A35D4C"
+                    app:cardCornerRadius="20dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_llave"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="70dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="#705B5B"
-                app:cardCornerRadius="20dp">
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/gas" />
+                </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:id="@+id/img_llave"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    tools:srcCompat="@drawable/llave" />
-            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_llave"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#705B5B"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/llave" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.gridlayout.widget.GridLayout>
+
         </androidx.cardview.widget.CardView>
     </androidx.cardview.widget.CardView>
 
