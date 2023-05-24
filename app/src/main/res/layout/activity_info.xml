@@ -96,8 +96,8 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:ems="10"
-            android:inputType="text"
-            android:text="Name" />
+            android:hint="Flete"
+            android:inputType="text" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -158,7 +158,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7">
 
         <EditText
-            android:id="et_galones"
+            android:id="@+id/et_galones"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:ems="10"
@@ -192,7 +192,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
         <EditText
-            android:id="et_precio"
+            android:id="@+id/et_precio"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:ems="10"
@@ -215,7 +215,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_cancelar"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="10dp"
@@ -238,7 +238,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_save"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="24dp"
@@ -246,7 +246,7 @@
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cv_cancelar"
-        app:layout_constraintTop_toBottomOf="@+id/cv_precio" >
+        app:layout_constraintTop_toBottomOf="@+id/cv_precio">
 
         <TextView
             android:id="@+id/textView11"
