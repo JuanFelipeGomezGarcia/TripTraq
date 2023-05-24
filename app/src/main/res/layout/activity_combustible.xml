@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Combustible"
+        android:text="@string/combustible"
         android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="163dp"
-        android:text="Galones:"
+        android:text="@string/galones2"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:ems="10"
-            android:hint="Galones"
+            android:hint="@string/galones3"
             android:inputType="numberDecimal" />
     </androidx.cardview.widget.CardView>
 
@@ -60,7 +60,7 @@
         android:layout_height="27dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="30dp"
-        android:text="Precio galon:"
+        android:text="@string/precio_galon2"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:ems="10"
-            android:hint="Precio Galon"
+            android:hint="@string/precio_galon3"
             android:inputType="number" />
     </androidx.cardview.widget.CardView>
 
@@ -105,7 +105,7 @@
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Cancelar"
+            android:text="@string/cancelar3"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -127,7 +127,7 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Guardar"
+            android:text="@string/guardar4"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="24sp" />
